@@ -1,0 +1,5 @@
+@mixin centralizar ($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}

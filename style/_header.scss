@@ -1,0 +1,25 @@
+.header {
+    width: 100vw;
+    height: 15vh;
+    @include centralizar(center);
+
+    a {
+        text-decoration: none;
+        color: #111;
+        @include centralizar(center);
+        color: $primary;
+
+        &:hover {
+            color: #6959CD;
+        }
+    }
+
+    h1 {
+        padding: 5% 15%;
+        text-align: center; 
+    }
+
+    i {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,26 @@
+$primary: #483D8B;
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+
+@import "./mixins/displayFlax.scss";
+
+@import "./header";
+
+@import "./banner";
+
+.secaoViagens {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: $primary;
+        font-size: 3rem;
+    }
+}

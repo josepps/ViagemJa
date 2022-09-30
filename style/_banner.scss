@@ -1,0 +1,22 @@
+#slider {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    @include centralizar(center);
+    background-color: $primary;
+
+    img {
+        opacity: 0;
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        object-fit: cover;
+        transition: ease-in-out 1.5s;
+    }
+
+    img.selected {
+        opacity: 1;
+    }
+
+}

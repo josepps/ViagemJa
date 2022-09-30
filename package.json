@@ -1,0 +1,12 @@
+{
+  "name": "viagemja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"sass --watch ./style/style.scss ./style/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
