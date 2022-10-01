@@ -8,7 +8,9 @@ body {
 
 @import "./mixins/displayFlax.scss";
 
-@import "./header";
+@import "./mixins/btn.scss";
+
+@import "./logo";
 
 @import "./banner";
 
@@ -22,5 +24,95 @@ body {
     h2 {
         color: $primary;
         font-size: 3rem;
+        height: 10%;
+    }
+
+    .containerViagens {
+        height: 70%;
+        @include centralizar(space-evenly);
+        flex-wrap: wrap;
+    
+        article {
+            height: 100%;
+            width: 30%;
+            @include centralizar(center);
+            flex-direction: column;
+
+            h2 {
+                margin: 0;
+                color: $primary;
+            }
+
+            h3 {
+                color: #000;
+                margin: 2%;
+            }
+
+            h4 {
+                color: $primary;
+                margin: 2%;
+            }
+
+            p {
+                height: 40%;
+                overflow-y: hidden;
+            }
+
+            a {
+                @include primaryBtn();
+                padding: 2% 4%;
+                margin-top: 2% ;
+            }
+        }
+    }
+
+    .btnTodasViagens {
+        height: 5%;
+        margin: 1%;
+        padding: 0 2%;
+        @include primaryBtn()        
     }
 }
+
+/*Seção: Sobre*/
+
+.sobreEmpresa {
+    height: 80vh;
+    width: 100vw;
+    @include centralizar(center);
+    background-color: $primary;
+    color: #fff;
+    box-shadow: 0px 10px #6959CD;
+
+    div {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        h2 {
+            font-size: 2rem;
+        }
+        
+        img {
+            width: 80%;
+        }
+    }
+}
+
+/*Footer*/
+
+.footer {
+    @include centralizar(center);
+    height: 20vh;
+
+    .linkFooter {
+        @include centralizar(center);
+        width: 40%;
+
+        a {
+            padding: 0 5%;
+        }
+}
+}
+

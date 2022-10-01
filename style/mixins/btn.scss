@@ -1,0 +1,15 @@
+@mixin primaryBtn () {
+    text-decoration: none;
+    border: 1px solid $primary;
+    border-radius: 20px;
+    background-color: $primary;
+    color: #fff;
+    font-weight: 600;
+    transition:  0.5s linear;
+        @include centralizar(center);
+
+        &:hover {
+            color: $primary;
+            background-color: #fff;
+        }
+}
