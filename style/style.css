@@ -5,6 +5,11 @@ body {
   overflow-x: hidden;
 }
 
+.bodyColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo {
   width: 100vw;
   height: 15vh;
@@ -65,6 +70,10 @@ body {
   font-size: 3rem;
   height: 10%;
 }
+.secaoViagens .borderViagens {
+  padding-bottom: 5%;
+  box-shadow: 0px 5px 4px 0px rgba(63, 63, 63, 0.27);
+}
 .secaoViagens .containerViagens {
   height: 70%;
   display: flex;
@@ -79,6 +88,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 1%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 10px;
 }
 .secaoViagens .containerViagens article h2 {
   margin: 0;
@@ -232,10 +244,6 @@ aside .navPainelAdm li {
   margin: 5px 0;
   font-weight: 700;
 }
-aside .navPainelAdm li .ativo {
-  background-color: #483D8B;
-  color: #fff;
-}
 aside .navPainelAdm li a {
   text-decoration: none;
   color: #000;
@@ -252,20 +260,20 @@ aside .navPainelAdm li a:hover {
   color: #fff;
 }
 
-main {
+.mainAside {
   width: 80vw;
 }
-main .headerMainAdm {
+.mainAside .headerMainAdm {
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 0 5% 5%;
 }
-main .headerMainAdm h1 {
+.mainAside .headerMainAdm h1 {
   margin-bottom: 4%;
 }
-main .headerMainAdm a {
+.mainAside .headerMainAdm a {
   background-color: #483D8B;
   height: 100%;
   color: #fff;
@@ -276,27 +284,27 @@ main .headerMainAdm a {
   font-weight: 700;
   transition: 0.3s linear;
 }
-main .headerMainAdm a:hover {
+.mainAside .headerMainAdm a:hover {
   background-color: #6959CD;
 }
-main .tabela {
+.mainAside .tabela {
   width: 100%;
 }
-main .linha1 {
+.mainAside .linha1 {
   color: #483D8B;
 }
-main tr {
+.mainAside tr {
   height: 5vh;
 }
-main th {
+.mainAside th {
   width: 20%;
 }
-main td {
+.mainAside td {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main a {
+.mainAside a {
   background-color: #483D8B;
   height: 100%;
   color: #fff;
@@ -310,8 +318,62 @@ main a {
   height: 20px;
   width: 100px;
 }
-main a:hover {
+.mainAside a:hover {
   background-color: #6959CD;
+}
+
+/* Cadastro-viagens */
+.mainCadastros .h1MainCadastros {
+  width: 80vw;
+  height: 15vh;
+  margin-left: 5%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.5rem;
+}
+.mainCadastros .formCadastro {
+  display: flex;
+  flex-direction: column;
+}
+.mainCadastros .formCadastro .containerFormCadastro {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0.5% 5%;
+}
+.mainCadastros .formCadastro .containerFormCadastro label {
+  margin-bottom: 2%;
+}
+.mainCadastros .formCadastro .containerFormCadastro input, .mainCadastros .formCadastro .containerFormCadastro textarea {
+  padding: 1.5% 0 1.5% 1%;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.mainCadastros .formCadastro button {
+  background-color: #483D8B;
+  height: 100%;
+  color: #fff;
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  margin-right: 3%;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s linear;
+  width: 10%;
+  height: 1vh;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.mainCadastros .formCadastro button:hover {
+  background-color: #6959CD;
+}
+
+/*Viagens.html*/
+.logoViagens {
+  box-shadow: 0px 5px 4px 0px rgba(63, 63, 63, 0.27);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,12 @@ $primary: #483D8B;
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
+}
+
+.bodyColumn {
+    display: flex;
+    flex-direction: column;
 }
 
 @import "./mixins/displayFlax.scss";
@@ -13,6 +18,7 @@ body {
 @import "./logo";
 
 @import "./banner";
+
 
 .secaoViagens {
     width: 100vw;
@@ -27,37 +33,46 @@ body {
         height: 10%;
     }
 
+    .borderViagens {
+        padding-bottom: 5%;
+        box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
+}        
+
     .containerViagens {
         height: 70%;
         @include centralizar(space-evenly);
         flex-wrap: wrap;
 
-        article {
+
+        article  {
             height: 100%;
             width: 30%;
             @include centralizar(center);
             flex-direction: column;
-
+            padding: 0 1%;
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            border-radius: 10px;
+        
             h2 {
                 margin: 0;
                 color: $primary;
             }
-
+        
             h3 {
                 color: #000;
                 margin: 2%;
             }
-
+        
             h4 {
                 color: $primary;
                 margin: 2%;
             }
-
+        
             p {
                 height: 40%;
                 overflow-y: hidden;
             }
-
+        
             a {
                 @include primaryBtn();
                 padding: 2% 4%;
@@ -70,6 +85,7 @@ body {
         height: 5%;
         margin: 1%;
         padding: 0 2%;
+        
         @include primaryBtn()
     }
 }
@@ -178,11 +194,6 @@ body {
                 height: 25%;          
                 margin: 5px 0;  
                 font-weight: 700;
-                
-                .ativo {
-                    background-color: $primary;
-                    color: #fff;
-                }
 
                 a {
                 text-decoration: none;
@@ -204,11 +215,7 @@ body {
         }
     }
 
-
-
-    
-
-    main {
+    .mainAside {
         width: 80vw;
 
         .headerMainAdm {
@@ -255,3 +262,54 @@ body {
             width: 100px;
         }
     }
+
+    /* Cadastro-viagens */
+
+.mainCadastros {
+
+    .h1MainCadastros {
+        width: 80vw;
+        height: 15vh;
+        margin-left: 5%;
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.5rem;
+    }
+
+    .formCadastro {
+        display: flex;
+        flex-direction: column;
+
+        .containerFormCadastro {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0.5%  5%;
+
+            label {
+                margin-bottom: 2%;
+            }
+
+            input, textarea {
+                padding: 1.5% 0 1.5% 1%;
+                border-radius: 10px;
+                border: 1px solid gray;
+            }
+        }
+
+        button {
+            @include secundBtn();
+            width: 10%;
+            height: 1vh;
+            margin-left: 5%;
+            @include centralizar(center);
+            border: none;
+        }
+    }
+}
+
+/*Viagens.html*/
+
+.logoViagens {
+    box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
+}
