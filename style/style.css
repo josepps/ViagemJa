@@ -175,4 +175,143 @@ body {
   padding: 0 5%;
 }
 
+/* Admin.html*/
+body {
+  display: flex;
+}
+
+aside {
+  width: 20vw;
+  height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside .logoAside {
+  width: 80%;
+  margin-top: 10%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 1px #d3d3d3;
+}
+aside .logoAside a {
+  text-decoration: none;
+  margin: 0;
+}
+aside .logoAside a:hover {
+  color: #6959CD;
+}
+aside .logoAside i {
+  font-size: 2rem;
+}
+aside .logoAside h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+aside .navPainelAdm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside .navPainelAdm ul {
+  width: 90%;
+  margin: 20% 0 0 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+}
+aside .navPainelAdm li {
+  list-style-type: none;
+  width: 100%;
+  height: 25%;
+  margin: 5px 0;
+  font-weight: 700;
+}
+aside .navPainelAdm li .ativo {
+  background-color: #483D8B;
+  color: #fff;
+}
+aside .navPainelAdm li a {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.5s linear;
+}
+aside .navPainelAdm li a:hover {
+  background-color: #483D8B;
+  color: #fff;
+}
+
+main {
+  width: 80vw;
+}
+main .headerMainAdm {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 0 5% 5%;
+}
+main .headerMainAdm h1 {
+  margin-bottom: 4%;
+}
+main .headerMainAdm a {
+  background-color: #483D8B;
+  height: 100%;
+  color: #fff;
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  margin-right: 3%;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s linear;
+}
+main .headerMainAdm a:hover {
+  background-color: #6959CD;
+}
+main .tabela {
+  width: 100%;
+}
+main .linha1 {
+  color: #483D8B;
+}
+main tr {
+  height: 5vh;
+}
+main th {
+  width: 20%;
+}
+main td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main a {
+  background-color: #483D8B;
+  height: 100%;
+  color: #fff;
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  margin-right: 3%;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s linear;
+  text-align: center;
+  height: 20px;
+  width: 100px;
+}
+main a:hover {
+  background-color: #6959CD;
+}
+
 /*# sourceMappingURL=style.css.map */

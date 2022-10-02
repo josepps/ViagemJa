@@ -31,7 +31,7 @@ body {
         height: 70%;
         @include centralizar(space-evenly);
         flex-wrap: wrap;
-    
+
         article {
             height: 100%;
             width: 30%;
@@ -61,7 +61,7 @@ body {
             a {
                 @include primaryBtn();
                 padding: 2% 4%;
-                margin-top: 2% ;
+                margin-top: 2%;
             }
         }
     }
@@ -70,7 +70,7 @@ body {
         height: 5%;
         margin: 1%;
         padding: 0 2%;
-        @include primaryBtn()        
+        @include primaryBtn()
     }
 }
 
@@ -93,7 +93,7 @@ body {
         h2 {
             font-size: 2rem;
         }
-        
+
         img {
             width: 80%;
         }
@@ -113,6 +113,145 @@ body {
         a {
             padding: 0 5%;
         }
-}
+    }
 }
 
+/* Admin.html*/
+
+body {
+
+    display: flex;}
+
+    aside {
+        width: 20vw;
+        height: 100vh;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logoAside {
+            width: 80%;
+            margin-top: 10%;
+            padding-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            box-shadow: 0 1px #d3d3d3;
+
+            a {
+                text-decoration: none;
+                margin: 0;
+
+                &:hover {
+                    color: #6959CD;
+                }
+            }
+
+            i {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+        }
+
+        .navPainelAdm {
+            width: 100%;
+            @include centralizar(center);
+
+            ul {
+                width: 90%;
+                margin: 20% 0 0 0;
+                padding: 0;
+                text-align: center;
+                height: 100%;
+            }
+
+            li{
+                list-style-type: none;
+                width: 100%;  
+                height: 25%;          
+                margin: 5px 0;  
+                font-weight: 700;
+                
+                .ativo {
+                    background-color: $primary;
+                    color: #fff;
+                }
+
+                a {
+                text-decoration: none;
+                color: #000;
+                width: 100%;
+                height: 100%;
+                @include centralizar(center);
+                border-radius: 10px;
+                transition:  0.5s linear;
+
+                &:hover {
+                    background-color: $primary;
+                    color: #fff;
+                }
+            }
+            }
+
+            
+        }
+    }
+
+
+
+    
+
+    main {
+        width: 80vw;
+
+        .headerMainAdm {
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 0 5% 5%;
+
+            h1 {
+                margin-bottom: 4%;
+            }
+
+            a {
+                @include secundBtn()
+            }
+        }
+
+        .tabela {
+            width: 100%;
+            
+        }
+
+        .linha1 {
+            color: #483D8B;
+        }
+
+        tr {
+            height: 5vh;
+        }
+
+        th {
+            width: 20%;
+        }
+
+        td {
+            @include centralizar(center);
+        }
+
+        a {
+            @include secundBtn();
+            text-align: center;
+            height: 20px;
+            width: 100px;
+        }
+    }
