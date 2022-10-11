@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/josepps/ViagemJa/issues"
   },
-  "homepage": "https://github.com/josepps/ViagemJa#readme"
+  "homepage": "https://github.com/josepps/ViagemJa#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-validation": "^4.1.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.23.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }

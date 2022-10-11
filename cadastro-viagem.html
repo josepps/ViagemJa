@@ -32,26 +32,27 @@
         </div>     
         <form class="formCadastro">
             <div class="containerFormCadastro"> 
-                <label for="Nome">Local</label>
+                <label for="Nome">Local *</label>
                 <input type="text" aria-describedby="nome">
             </div>   
             <div class="containerFormCadastro">
-                <label for="atracoes">Atrações</label>
+                <label for="atracoes">Atrações *</label>
                 <input type="text" aria-describedby="atracoes">
                 <small>insira o nome dos passeios separados por vírgula</small>
             </div>
             <div class="containerFormCadastro">
-                <label for="descricao">Descrição</label>
+                <label for="descricao">Descrição *</label>
                 <textarea name="descricao" rows="5"></textarea>
             </div>
             <div class="containerFormCadastro">
-                <label for="data">Data</label>
+                <label for="data">Data *</label>
                 <input type="datetime-local" name="data" placeholder="00/00/00 00:00">
             </div>
             <div class="containerFormCadastro">
-                <label for="lotacao">Lotação (número de passagens disponiveis)</label>
+                <label for="lotacao">Lotação (número de passagens disponiveis) *</label>
                 <input type="number" aria-describedby="lotacao">
             </div>
+            <span style="margin: 1% 0% 1% 5%; font-size:0.8rem ;" >* São campos obrigatórios</span>
             <button type="submit">enviar</button >
         </form>
     </main>
