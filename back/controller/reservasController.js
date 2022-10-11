@@ -1,50 +1,65 @@
-// #listar reserva por id
-
 const { reservas, viagem }  = require("../models")
 
 const reservasController = {
     listarReserva: async (req, res) => {
-
+        try {
         const listaDeReservas = await reservas.findAll({
             include: viagem
         });
 
-        res.json(listaDeReservas);
+        res.status(200).json(listaDeReservas);
+    } catch (error) {
+        return res.status(500).json("ocorreu algum problema")
+     }
     },
 
     async criarReserva(req, res) {
+        try {
         const {nome, email, passagens, viagem_id} = req.body;
 
         const novaReserva = await reservas.create({
-            nome, email, passagens, viagem_id
+            nome, 
+            email, 
+            passagens, 
+            viagem_id
         });
 
-        res.json(novaReserva);
+        res.status(201).json(novaReserva);
+    } catch (error) {
+        return res.status(500).json("ocorreu algum problema")
+    }
     },
 
     async listarReservaId(req, res) {
+        try {
         const { id } = req.params;
 
         const listaDereservasId = await reservas.findByPk(id, {
             include: viagem
         });
 
-        res.json(listaDereservasId);
+        res.status(200).json(listaDereservasId);
+    } catch (error) {
+        return res.status(500).json("ocorreu algum problema")
+    }
     },
 
-//fazendo (só aqui)
-
     async listarReservaIdViagem(req, res) {
+        try {
         const { id } = req.params;
 
         const listaDereservasIdViagem = await viagem.findByPk(id, {
             include: reservas
         });
 
-        res.json(listaDereservasIdViagem);
+        res.status(200).json(listaDereservasIdViagem);
+    } catch (error) {
+        return res.status(500).json("ocorreu algum problema")
+    }
     },
 
     async deletarReserva(req, res) {
+        try{ 
         const { id } = req.params;
 
         await reservas.destroy({
@@ -53,7 +68,10 @@ const reservasController = {
             },
         });
         
-        res.json("Reserva deletada")
+        res.sendStatus(204);
+        } catch(error) {
+            return res.status(500).json("ocorreu algum problema")
+        }
     },
 
 };
